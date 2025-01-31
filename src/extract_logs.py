@@ -2,8 +2,10 @@ import sys,os,re
 
 def extract_logs(file, date, op="output"):
     os.makedirs(op, exist_ok=True)
-    temp = os.path.join(op, f"output_{date}.txt")
     
+    te = "output_" + date + ".txt"
+    temp = os.path.join(op, te)
+
     pat = re.compile(f"^{date}T")
     
     try:
