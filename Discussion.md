@@ -1,5 +1,3 @@
-# Discussion.md
-
 ## Solutions Considered
 To extract logs efficiently from large file as such, I thought of follwing appraches from which I went with the last one.
 
@@ -19,3 +17,14 @@ Instead of splitting strings, I decided to use **regular expressions** to match 
 
 
 **Update** : I just opened test_log file and found the log format is like **2024-11-02T07:19:55.0000 - ERROR - User successfully logged in** instead of given in Readme.md. So all i had to change in my code was `pat = re.compile(f"^{date} ")` to `pat = re.compile(f"^{date}T")`
+
+## **Steps to run**
+
+Place extract_logs.py in the same directory as the log file. Run the script with a date:
+
+`python extract_logs.py 2024-12-01`
+
+
+Extracted logs will be in output/output_YYYY-MM-DD.txt.
+
+
