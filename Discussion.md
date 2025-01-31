@@ -16,7 +16,7 @@ Instead of splitting strings, I decided to use **regular expressions** to match 
 **3. Output Directory Handling** - Automatically creates an `output/` folder if it doesn’t exist, so the user doesn’t have to worry about manually making it.
 
 
-**Update** : I just opened test_log file and found the log format is like **2024-11-02T07:19:55.0000 - ERROR - User successfully logged in** instead of given in Readme.md. So all i had to change in my code was `pat = re.compile(f"^{date} ")` to `pat = re.compile(f"^{date}T")`
+**Update** : I just opened test_log file and found the log format is like **` 2024-11-02T07:19:55.0000 - ERROR - User successfully logged in `** instead of the format given in example in Readme.md. So all I had to change in my code was `pat = re.compile(f"^{date} ")` to `pat = re.compile(f"^{date}T")`
 
 ## **Steps to run**
 
