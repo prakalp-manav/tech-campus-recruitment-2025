@@ -16,10 +16,6 @@ def extract_logs(file, date, op="output"):
         print("Error occured - ",e)
 
 
-if len(sys.argv) != 2:
-    print("Usage: python extract_logs.py YYYY-MM-DD")
-    sys.exit(1)
-    
 date = sys.argv[1]
 file = "test_logs.log"
 extract_logs(file,date)
